@@ -1,0 +1,16 @@
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\netstandard2.0\ExpenseTracker.deps.json
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\netstandard2.0\ExpenseTracker.dll
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\netstandard2.0\ref\ExpenseTracker.dll
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\netstandard2.0\ExpenseTracker.pdb
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.csprojAssemblyReference.cache
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.csproj.CoreCompileInputs.cache
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.AssemblyInfoInputs.cache
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.AssemblyInfo.cs
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\XamlC.stamp
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.dll
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ref\ExpenseTracker.dll
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseTracker.pdb
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\ExpenseEntryPage.xaml.g.cs
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\netstandard2.0\SecondPage.xaml.g.cs
