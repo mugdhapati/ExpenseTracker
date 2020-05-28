@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ExpenseTracker
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class ExpenseEntryPage : ContentPage
     {
         public ExpenseEntryPage()
@@ -17,7 +17,12 @@ namespace ExpenseTracker
             InitializeComponent();
         }
 
-        private void OnAddButtonClicked(object sender, EventArgs e)
+        private void OnSaveButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnCancelButtonClicked(object sender, EventArgs e)
         {
 
         }

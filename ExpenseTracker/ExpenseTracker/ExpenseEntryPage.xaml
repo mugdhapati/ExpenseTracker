@@ -6,18 +6,26 @@
              mc:Ignorable="d"
              x:Class="ExpenseTracker.ExpenseEntryPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Enter Expenses"
-                   HorizontalOptions="Center"
-                   FontAttributes="Bold" />
-            <Editor x:Name="editor"
-                Placeholder="Add Expense"
-                HeightRequest="100"/>
+        <StackLayout Margin="10,35,10,10">
+            <Label Text="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
+
+            <Label Text="Enter your Expenses" FontAttributes="Bold" FontSize="Medium"/>
+
+            <Editor Placeholder="Name" PlaceholderColor="Gray"/>
+
+            <Entry Placeholder="Date" PlaceholderColor="Gray" Keyboard="Numeric"/>
+
+            <Entry Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
+            
+            
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Text="Add" Clicked="OnAddButtonClicked"/>
+                <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+                <Button Text="Cancel" Grid.Column="1" Clicked="OnCancelButtonClicked"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

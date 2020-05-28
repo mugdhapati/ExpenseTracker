@@ -10,19 +10,19 @@ using Xamarin.Forms.Xaml;
 
 namespace ExpenseTracker
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+   
     public partial class SecondPage : ContentPage
     {
-        public SecondPage(String parameter)
+        public SecondPage(string parameter)
         {
             InitializeComponent();
 
             MainLabel.Text = parameter;
         }
 
-        private void OnAddButtonClicked(object sender, EventArgs e)
+        private async void OnAddButtonClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new ExpenseEntryPage());
         }
 
     }

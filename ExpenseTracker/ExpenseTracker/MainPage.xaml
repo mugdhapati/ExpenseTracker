@@ -12,9 +12,11 @@
                HorizontalOptions="Center"
                FontAttributes="Bold"
                FontSize="Large" />
-        <Editor x:Name="MonthlyGoal"
-                Placeholder="Enter Here"
-                HeightRequest="100"/>
+        
+        <Entry x:Name="MonthlyGoal"
+                Placeholder="Enter your Goal"
+                HeightRequest="50" Keyboard="Numeric" />
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

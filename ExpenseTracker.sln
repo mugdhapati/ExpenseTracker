@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Android", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.iOS", "ExpenseTracker\ExpenseTracker.iOS\ExpenseTracker.iOS.csproj", "{CB985B1A-E3EC-4440-84C9-0977A70C43F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker\ExpenseTracker.csproj", "{E86C8AD9-053C-471C-8992-AD292E9B3B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker\ExpenseTracker.csproj", "{E86C8AD9-053C-471C-8992-AD292E9B3B58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

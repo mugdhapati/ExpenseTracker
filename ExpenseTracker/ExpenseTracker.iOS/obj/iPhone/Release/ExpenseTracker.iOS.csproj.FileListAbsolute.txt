@@ -1,0 +1,8 @@
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\ibtool\_BundleResourceWithLogicalName.items
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\actool\_PartialAppManifest.items
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\actool\_BundleResourceWithLogicalName.items
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\coremlc\_PartialAppManifest.items
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\coremlc\_BundleResourceWithLogicalName.items
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\optimized\
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\ExpenseTracker.iOS.csprojAssemblyReference.cache
+C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker.iOS\obj\iPhone\Release\ExpenseTracker.iOS.csproj.CoreCompileInputs.cache

@@ -6,22 +6,23 @@
              mc:Ignorable="d"
              x:Class="ExpenseTracker.SecondPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Expense Tracker"
-                HorizontalOptions="CenterAndExpand" 
-                FontAttributes="Bold"
-                FontSize="Large"/>
+        <StackLayout Margin="10,35,10,10">
 
-            <Label x:Name="MainLabel"
-                   TextColor="Gray"
-                   FontSize="Medium"/>
-            
+            <Label Text ="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
+
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Add Expenses" Clicked="OnAddButtonClicked"/>
+                    <Label Grid.Column="0" Text="Monthly Goal" FontAttributes="Bold" HeightRequest="50" FontSize="Medium"/>
+
+                    <Label Grid.Column="1" x:Name="MainLabel" TextColor="Gray" FontSize="Medium" HorizontalTextAlignment="End"/>
+                
             </Grid>
+                <Button Text="Add Expenses" Clicked="OnAddButtonClicked"/>
+            
             
         </StackLayout>
     </ContentPage.Content>
