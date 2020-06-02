@@ -17,9 +17,11 @@
                     Placeholder="Name"
                     />
 
-            <Editor x:Name="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
+            <Editor Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
 
-            <Editor x:Name="Purchase Date" PlaceholderColor="Gray" Keyboard="Numeric"/>
+          
+
+            <DatePicker x:Name="PurchaseDate" Format="D" Margin="30,0,0,30"/>
 
             <Picker x:Name="Category"
                     Title="Select a Category"

@@ -13,7 +13,7 @@
                FontAttributes="Bold"
                FontSize="Large" />
         
-        <Editor x:Name="MonthlyGoal"
+        <Editor x:Name="Budget"
                 Placeholder="Enter your Goal"
                 HeightRequest="50" Keyboard="Numeric" />
         

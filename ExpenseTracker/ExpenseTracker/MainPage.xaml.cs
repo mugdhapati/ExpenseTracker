@@ -15,24 +15,25 @@ namespace ExpenseTracker
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "expense.txt");
+        string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Expense.txt");
         public MainPage()
         {
-            InitializeComponent();
-            if(File.Exists(_fileName))
-            {
-                MonthlyGoal.Text = File.ReadAllText(_fileName);
-            }
+
             
         }
 
         private async void OnSaveButtonClicked(object sender, EventArgs e)
         {
-            string text = MonthlyGoal.Text;
+            
 
-            await Navigation.PushModalAsync(new SecondPage(MonthlyGoal.Text));
+            File.WriteAllText(_fileName, Budget.Text);
 
-            File.WriteAllText(_fileName, MonthlyGoal.Text);
+            await Navigation.PushModalAsync(new SecondPage
+            {
+                budget = Budget.Text
+            });
+
+           
                 
             
         }
@@ -43,7 +44,7 @@ namespace ExpenseTracker
             {
                 File.Delete(_fileName);
             }
-            MonthlyGoal.Text = string.Empty;
+            Budget.Text = string.Empty;
         }
     }
 }

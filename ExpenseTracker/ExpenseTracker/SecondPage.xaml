@@ -10,7 +10,18 @@
         <StackLayout Margin="10,35,10,10">
 
             <Label Text ="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
 
+                <Label Grid.Column="1" x:Name="BudgetLabel" TextColor="Gray" FontSize="Medium" HorizontalTextAlignment="End"/>
+
+            </Grid>
+            <Button Text="Add Expenses" Clicked="OnAddButtonClicked"/>
+            
             <ListView x:Name="listView"
                       Margin="20"
                       ItemSelected="OnListViewItemSelected">
@@ -21,17 +32,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="Monthly Goal" FontAttributes="Bold" HeightRequest="50" FontSize="Medium"/>
-
-                    <Label Grid.Column="1" x:Name="MainLabel" TextColor="Gray" FontSize="Medium" HorizontalTextAlignment="End"/>
-                
-            </Grid>
-                <Button Text="Add Expenses" Clicked="OnAddButtonClicked"/>
+            
+            
             
             
         </StackLayout>

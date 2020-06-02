@@ -18,10 +18,13 @@ namespace ExpenseTracker
         public ExpenseEntryPage()
         {
             InitializeComponent();
+          
         }
 
-        private void OnSaveButtonClicked(object sender, EventArgs e)
+        private async void OnSaveButtonClicked(object sender, EventArgs e)
         {
+            
+
             var expense = (Expense)BindingContext;
             if(string.IsNullOrWhiteSpace(expense.Filename))
             {
@@ -33,6 +36,11 @@ namespace ExpenseTracker
                 //Update
                 File.WriteAllText(expense.Filename, editor.Text);
             }
+
+            await Navigation.PushModalAsync(new SecondPage
+            {
+                BindingContext = new Expense()
+            }) ;
         }
 
         private void OnCancelButtonClicked(object sender, EventArgs e)

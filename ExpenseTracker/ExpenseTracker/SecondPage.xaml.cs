@@ -15,11 +15,13 @@ namespace ExpenseTracker
    
     public partial class SecondPage : ContentPage
     {
-        public SecondPage(string parameter)
+        internal string budget;
+
+        public SecondPage()
         {
             InitializeComponent();
 
-            MainLabel.Text = parameter;
+            
 
             var expenses = new List<Expense>();
 
