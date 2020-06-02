@@ -1,7 +1,0 @@
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\App.xaml.g.cs
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\ExpenseEntryPage.xaml.g.cs
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\MainPage.xaml.g.cs
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\SecondPage.xaml.g.cs
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\ExpenseTracker.csproj.CoreCompileInputs.cache
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\ExpenseTracker.AssemblyInfoInputs.cache
-C:\GitHub\SWC7\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Release\netstandard2.0\ExpenseTracker.AssemblyInfo.cs

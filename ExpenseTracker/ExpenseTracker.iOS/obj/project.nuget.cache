@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DdR+OWWrsVSKfPouFTq+dIbHC/MKaOpH4ysTNd5zjxHVyh/upEDGQqnfX4KoiyPyCXxaiJXhxBf/L0SU72v+sQ==",
+  "dgSpecHash": "8BPp5oqbEYQRhGLqj+UWdjndj05enQ5C3jHCCR2SqhKXfFL87PB2g6u3Td6BNbXnpjybE21mqFOhN2q7Nt+YZw==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\SWC7\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.iOS\\ExpenseTracker.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mugdhapati\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+    "C:\\Users\\Mugdhapati\\.nuget\\packages\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
   "logs": []
 }

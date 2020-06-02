@@ -4,19 +4,38 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Expense Entry Page"
              x:Class="ExpenseTracker.ExpenseEntryPage">
     <ContentPage.Content>
         <StackLayout Margin="10,35,10,10">
+            
             <Label Text="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
-
+            
             <Label Text="Enter your Expenses" FontAttributes="Bold" FontSize="Medium"/>
 
-            <Editor Placeholder="Name" PlaceholderColor="Gray"/>
+            <Editor x:Name="editor"
+                    Placeholder="Name"
+                    />
 
-            <Entry Placeholder="Date" PlaceholderColor="Gray" Keyboard="Numeric"/>
+            <Editor x:Name="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
 
-            <Entry Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
-            
+            <Editor x:Name="Purchase Date" PlaceholderColor="Gray" Keyboard="Numeric"/>
+
+            <Picker x:Name="Category"
+                    Title="Select a Category"
+                    TitleColor="Red">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Rent</x:String>
+                        <x:String>Groceries</x:String>
+                        <x:String>Gas</x:String>
+                        <x:String>Utilities</x:String>
+                        <x:String>Insurance</x:String>
+                        <x:String>Travel</x:String>
+                        <x:String>Miscellaneous</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             
 
             <Grid>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6CeP2MJ/SuKseJpdous+wZDzMxmIu2XpjxAkfsM0uDYawalrzWzqldvw4D4FCC6fGgunlJ0glq9NgVCy3JQ+PQ==",
+  "dgSpecHash": "3cZRPp04uQbFzYxAYul/89lt5S7fYbDpaI2HbVHTfoTitEiNuF+Ou8MXJG6/ThnlF84A9fTWhr/TWiQj16PRDA==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\SWC7\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.Android\\ExpenseTracker.Android.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+    "C:\\Users\\Mugdhapati\\.nuget\\packages\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
   "logs": []
 }

@@ -6,11 +6,21 @@
              mc:Ignorable="d"
              x:Class="ExpenseTracker.SecondPage">
     <ContentPage.Content>
+       
         <StackLayout Margin="10,35,10,10">
 
             <Label Text ="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
 
-
+            <ListView x:Name="listView"
+                      Margin="20"
+                      ItemSelected="OnListViewItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Text}"
+                                  Detail="{Binding Date}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
