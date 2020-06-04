@@ -18,33 +18,32 @@ namespace ExpenseTracker
         string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Expense.txt");
         public MainPage()
         {
+            InitializeComponent();
+            if (File.Exists(_fileName))
+            {
+                MonthlyGoal.Text = File.ReadAllText(_fileName);
+            }
 
-            
         }
 
         private async void OnSaveButtonClicked(object sender, EventArgs e)
         {
-            
+            string text = MonthlyGoal.Text;
 
-            File.WriteAllText(_fileName, Budget.Text);
+            await Navigation.PushModalAsync(new SecondPage(MonthlyGoal.Text));
 
-            await Navigation.PushModalAsync(new SecondPage
-            {
-                budget = Budget.Text
-            });
+            File.WriteAllText(_fileName, MonthlyGoal.Text);
 
-           
-                
-            
+
         }
 
         private void OnDeleteButtonClicked(object sender, EventArgs e)
         {
-            if(File.Exists(_fileName))
+            if (File.Exists(_fileName))
             {
                 File.Delete(_fileName);
             }
-            Budget.Text = string.Empty;
+            MonthlyGoal.Text = string.Empty;
         }
     }
 }

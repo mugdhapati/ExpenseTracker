@@ -23,12 +23,10 @@ namespace ExpenseTracker
 
         private async void OnSaveButtonClicked(object sender, EventArgs e)
         {
-            
-
             var expense = (Expense)BindingContext;
-            if(string.IsNullOrWhiteSpace(expense.Filename))
+            if (string.IsNullOrWhiteSpace(expense.Filename))
             {
-                var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),$"{Path.GetRandomFileName()}.expenses.txt");
+                var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), $"{Path.GetRandomFileName()}.expenses.txt");
                 File.WriteAllText(filename, editor.Text);
             }
             else
@@ -37,20 +35,17 @@ namespace ExpenseTracker
                 File.WriteAllText(expense.Filename, editor.Text);
             }
 
-            await Navigation.PushModalAsync(new SecondPage
-            {
-                BindingContext = new Expense()
-            }) ;
+            await Navigation.PopModalAsync();
         }
 
-        private void OnCancelButtonClicked(object sender, EventArgs e)
+        private async void OnCancelButtonClicked(object sender, EventArgs e)
         {
             var expense = (Expense)BindingContext;
             if(File.Exists(expense.Filename))
             {
                 File.Delete(expense.Filename);
             }
-            editor.Text = string.Empty;
+            await Navigation.PopModalAsync();
         }
     }
 }

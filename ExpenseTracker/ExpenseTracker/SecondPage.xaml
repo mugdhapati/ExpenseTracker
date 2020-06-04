@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="ExpenseTracker.SecondPage">
     <ContentPage.Content>
-       
+
         <StackLayout Margin="10,35,10,10">
 
             <Label Text ="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
@@ -15,13 +15,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
+                <Label Grid.Column="0" Text="Monthly Goal" FontAttributes="Bold" HeightRequest="50" FontSize="Medium"/>
 
-                <Label Grid.Column="1" x:Name="BudgetLabel" TextColor="Gray" FontSize="Medium" HorizontalTextAlignment="End"/>
+                <Label Grid.Column="1" x:Name="MainLabel" TextColor="Gray" FontSize="Medium" HorizontalTextAlignment="End"/>
 
             </Grid>
             <Button Text="Add Expenses" Clicked="OnAddButtonClicked"/>
-            
             <ListView x:Name="listView"
                       Margin="20"
                       ItemSelected="OnListViewItemSelected">
@@ -34,8 +33,8 @@
             </ListView>
             
             
-            
-            
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

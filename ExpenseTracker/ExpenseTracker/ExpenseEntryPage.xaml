@@ -8,20 +8,20 @@
              x:Class="ExpenseTracker.ExpenseEntryPage">
     <ContentPage.Content>
         <StackLayout Margin="10,35,10,10">
-            
+
             <Label Text="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
-            
+
             <Label Text="Enter your Expenses" FontAttributes="Bold" FontSize="Medium"/>
 
-            <Editor x:Name="editor"
-                    Placeholder="Name"
-                    />
+            <Editor x:Name="editor" Placeholder="Name" PlaceholderColor="Gray" Text="{Binding Text}"/>
 
-            <Editor Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric"/>
+            <Editor Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric" Text="{Binding Amount}"/>
 
-          
+            <Label Text="PurchaseDate" FontSize="Medium"/>
 
-            <DatePicker x:Name="PurchaseDate" Format="D" Margin="30,0,0,30"/>
+            <DatePicker x:Name="PurchaseDate" Format="D" Margin="30,0,0,30" MinimumDate="1/1/2020" MaximumDate="12/31/2030"/>
+
+            
 
             <Picker x:Name="Category"
                     Title="Select a Category"
@@ -38,7 +38,7 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            
+
 
             <Grid>
                 <Grid.ColumnDefinitions>

@@ -15,20 +15,19 @@ namespace ExpenseTracker
    
     public partial class SecondPage : ContentPage
     {
-        internal string budget;
 
-        public SecondPage()
+        public SecondPage(string parameter)
         {
             InitializeComponent();
 
-            
+            MainLabel.Text = parameter;
 
             var expenses = new List<Expense>();
 
-            var files= Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "*.expense.txt");
 
-            foreach(var filename in files)
+            foreach (var filename in files)
             {
                 var expense = new Expense
                 {
@@ -39,16 +38,25 @@ namespace ExpenseTracker
                 expenses.Add(expense);
             }
             listView.ItemsSource = expenses.OrderBy(n => n.PurchaseDate).ToList();
+
         }
+
+        
 
         private async void OnAddButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new ExpenseEntryPage());
         }
 
-        private void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            if(e.SelectedItem !=null)
+            {
+                await Navigation.PushModalAsync(new ExpenseEntryPage
+                {
+                    BindingContext = (Expense)e.SelectedItem
+                });
+            }
         }
     }
 }

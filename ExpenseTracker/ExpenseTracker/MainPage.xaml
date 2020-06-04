@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Expense Tracker"
+             Title="ExpenseTracker"
              x:Class="ExpenseTracker.MainPage">
 
     <StackLayout Margin="10,35,10,10">
@@ -12,11 +12,10 @@
                HorizontalOptions="Center"
                FontAttributes="Bold"
                FontSize="Large" />
-        
-        <Editor x:Name="Budget"
+
+        <Editor x:Name="MonthlyGoal"
                 Placeholder="Enter your Goal"
                 HeightRequest="50" Keyboard="Numeric" />
-        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
