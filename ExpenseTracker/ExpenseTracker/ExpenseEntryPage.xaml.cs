@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,41 +12,71 @@ using Xamarin.Forms.Xaml;
 
 namespace ExpenseTracker
 {
-    
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ExpenseEntryPage : ContentPage
     {
+        public string Budget { get; set; }
 
         public ExpenseEntryPage()
         {
             InitializeComponent();
-          
         }
 
-        private async void OnSaveButtonClicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            var expense = (Expense)BindingContext;
-            if (string.IsNullOrWhiteSpace(expense.Filename))
+            BudgetLabel.Text = $"BudgetExpense is {Budget}";
+
+
+
+
+            var expenseDataFiles = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "*.expenses.txt");
+
+            var expenses = new List<Expenses>();
+
+
+            foreach (var dataFile in expenseDataFiles)
             {
-                var filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), $"{Path.GetRandomFileName()}.expenses.txt");
-                File.WriteAllText(filename, editor.Text);
-            }
-            else
-            {
-                //Update
-                File.WriteAllText(expense.Filename, editor.Text);
+                //fruits \n 10 \n food
+                /*File.Delete(dataFile);
+                continue;*/
+                var data = File.ReadAllText(dataFile);
+                string[] dataSplit = data.Split('\n');
+
+
+                var expense = new Expenses
+                {
+                    Name = dataSplit[0],
+                    Amount = Convert.ToDecimal(dataSplit[1]),
+                    Category = dataSplit[2],
+                    DateOfPurchase = Convert.ToDateTime(dataSplit[3])
+                    
+                };
+
+                expenses.Add(expense);
             }
 
-            await Navigation.PopModalAsync();
+            listview.ItemsSource = expenses;
         }
 
-        private async void OnCancelButtonClicked(object sender, EventArgs e)
+
+        private async void OnAddExpensesClicked(object sender, EventArgs e)
         {
-            var expense = (Expense)BindingContext;
-            if(File.Exists(expense.Filename))
+            await Navigation.PushModalAsync(new ExpenseModel
             {
-                File.Delete(expense.Filename);
-            }
-            await Navigation.PopModalAsync();
+                BindingContext = new Expenses()
+            });
+        }
+
+        private void OnSaveButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnDeleteButtonClicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

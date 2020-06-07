@@ -95,30 +95,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Gas.png" />
+    <AndroidResource Include="Resources\Utilities.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Groceries.png" />
+    <AndroidResource Include="Resources\Gas.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Insurance.png" />
+    <AndroidResource Include="Resources\Groceries.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Rent.png" />
+    <AndroidResource Include="Resources\Insurance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Travel.png" />
+    <AndroidResource Include="Resources\Miscellaneous.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Miscellaneous.png" />
+    <AndroidResource Include="Resources\Rent.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Icons\Utilities.png" />
+    <AndroidResource Include="Resources\Travel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadUnhandledDeviceExceptionExpenseTrackerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionExpenseTrackerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionExpenseTrackerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

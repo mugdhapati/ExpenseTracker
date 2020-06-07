@@ -4,50 +4,59 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Expense Entry Page"
              x:Class="ExpenseTracker.ExpenseEntryPage">
     <ContentPage.Content>
-        <StackLayout Margin="10,35,10,10">
+        <ScrollView BackgroundColor="Black">
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-            <Label Text="Expense Tracker" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" HeightRequest="50"/>
+                    <Button Text="Add Expenses" FontSize="16" TextColor="White" BackgroundColor="Blue" Clicked="OnAddExpensesClicked" Grid.Row="1"/>
+                    <Label x:Name="BudgetLabel"  TextColor="White" FontSize="Large" Grid.Row="2"/>
 
-            <Label Text="Enter your Expenses" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label Text="Expenses List :-" FontSize="25" TextColor="Coral" Grid.Row="3"/>
 
-            <Editor x:Name="editor" Placeholder="Name" PlaceholderColor="Gray" Text="{Binding Text}"/>
+                    <!--<ListView x:Name="listView" Grid.Row="2"
+                  Margin="20">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}"
+                              Detail="{Binding DateOfPurchase}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                    <ListView x:Name="listview" Grid.Row="4" RowHeight="150">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Height="180">
+                                    <Frame OutlineColor="GreenYellow"  HeightRequest="1000" BackgroundColor="Black" 
+                                        Padding="1"  >
+                                        <StackLayout>
+                                            <StackLayout Orientation="Vertical"  VerticalOptions="FillAndExpand">
+                                                <Label Text="{x:Binding Name}" FontSize="Large" TextColor="White"/>
+                                                
+                                                <Label Text="{x:Binding Amount}" FontSize="Large" TextColor="White"/>
 
-            <Editor Placeholder="Amount" PlaceholderColor="Gray" Keyboard="Numeric" Text="{Binding Amount}"/>
+                                                <Label Text="{x:Binding Category}" FontSize="Large" TextColor="White"/>
 
-            <Label Text="PurchaseDate" FontSize="Medium"/>
-
-            <DatePicker x:Name="PurchaseDate" Format="D" Margin="30,0,0,30" MinimumDate="1/1/2020" MaximumDate="12/31/2030"/>
-
-            
-
-            <Picker x:Name="Category"
-                    Title="Select a Category"
-                    TitleColor="Red">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Rent</x:String>
-                        <x:String>Groceries</x:String>
-                        <x:String>Gas</x:String>
-                        <x:String>Utilities</x:String>
-                        <x:String>Insurance</x:String>
-                        <x:String>Travel</x:String>
-                        <x:String>Miscellaneous</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+                                                <Label Text="{x:Binding DateOfPurchase}" FontSize="Large" TextColor="White"/>
 
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Text="Save" Clicked="OnSaveButtonClicked"/>
-                <Button Text="Cancel" Grid.Column="1" Clicked="OnCancelButtonClicked"/>
-            </Grid>
-        </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

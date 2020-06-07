@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ExpenseTracker.Models.ExpenseModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Entry x:Name="nameLabel"  Placeholder="Name"  Grid.Row="0" FontSize="Large" PlaceholderColor="Black" />
+                <Entry x:Name="amountLabel" Placeholder="Amount" Grid.Row="1" FontSize="Large" PlaceholderColor="Black"/>
+                <StackLayout Grid.Row="2">
+                    <Label Text="Enter the PuchaseDate" FontSize="Large" TextColor="Red"/>
+                    <DatePicker x:Name="MainDatePicker" Grid.Row="3" 
+                            MinimumDate="1/1/2020"
+                            MaximumDate="12/31/2050"
+                            DateSelected="MainDatePicker_DateSelected"/>
+
+                </StackLayout>
+
+                <Picker x:Name="pickerCategory"  Grid.Row="4" 
+                Title="Select a Category" FontSize="Large" 
+                TitleColor="Red">
+                    <Picker.Items>
+                        <x:String>Food</x:String>
+                        <x:String>Travel</x:String>
+                        <x:String>Insurance</x:String>
+                        <x:String>Utilities</x:String>
+                        <x:String>Miscellaneous</x:String>
+                    </Picker.Items>
+                </Picker>
+                <StackLayout Orientation="Horizontal" Grid.Row="5" Margin="10,15,10,10" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Save" Clicked="OnSaveButtonClicked" />
+                    <Button Text="Cancel" Clicked="OnDeleteButtonClicked"/>
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

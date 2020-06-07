@@ -4,25 +4,29 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="ExpenseTracker"
+             Title="Expenses"  
              x:Class="ExpenseTracker.MainPage">
+  
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Set your monthly goal"
+               HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap" FontSize="Large"
+               TextDecorations="None" FontAttributes="Bold" TextColor="Black"/>
 
-    <StackLayout Margin="10,35,10,10">
-        <Label Text="Expense Tracker"
-               HorizontalOptions="Center"
-               FontAttributes="Bold"
-               FontSize="Large" />
+            <Editor x:Name="budget"
+               
+                Placeholder="Set the budget" PlaceholderColor="Black"
+                HeightRequest="70"/>
 
-        <Editor x:Name="MonthlyGoal"
-                Placeholder="Enter your Goal"
-                HeightRequest="50" Keyboard="Numeric" />
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button Text="Save" Clicked="OnSaveButtonClicked"/>
-            <Button Text="Delete" Grid.Column="1" Clicked="OnDeleteButtonClicked"/>
-        </Grid>
-    </StackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+                <Button Text="Delete" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+            </Grid>
+        </StackLayout>
+
 </ContentPage>
