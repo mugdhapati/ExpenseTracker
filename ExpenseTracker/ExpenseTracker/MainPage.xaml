@@ -8,14 +8,13 @@
              x:Class="ExpenseTracker.MainPage">
   
         <StackLayout Margin="20,35,20,20">
-            <Label Text="Set your monthly goal"
-               HorizontalOptions="FillAndExpand" LineBreakMode="WordWrap" FontSize="Large"
-               TextDecorations="None" FontAttributes="Bold" TextColor="Black"/>
+        <Label Text="Expense Tracker" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large" HeightRequest="50"/>
+        
 
             <Editor x:Name="budget"
                
-                Placeholder="Set the budget" PlaceholderColor="Black"
-                HeightRequest="70"/>
+                Placeholder="Set your budget goal" PlaceholderColor="Black"
+                 Keyboard="Numeric"/>
 
 
             <Grid>

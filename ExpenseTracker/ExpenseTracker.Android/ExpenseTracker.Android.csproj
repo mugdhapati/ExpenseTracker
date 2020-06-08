@@ -101,7 +101,7 @@
     <AndroidResource Include="Resources\Gas.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Groceries.png" />
+    <AndroidResource Include="Resources\Food.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Insurance.png" />
@@ -118,7 +118,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadUnhandledDeviceExceptionExpenseTrackerAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionExpenseTrackerAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionExpenseTrackerAndroidHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionExpenseTrackerAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

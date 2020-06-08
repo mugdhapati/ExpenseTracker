@@ -42,7 +42,7 @@ namespace ExpenseTracker
 
         private void OnDeleteButtonClicked(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

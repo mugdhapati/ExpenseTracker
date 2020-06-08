@@ -24,23 +24,22 @@ namespace ExpenseTracker
 
         protected override void OnAppearing()
         {
+            decimal totalSum = 0;
             BudgetLabel.Text = $"BudgetExpense is {Budget}";
 
-
-
-
             var expenseDataFiles = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "*.expenses.txt");
+                "*.expenses.txt").ToList();
 
             var expenses = new List<Expenses>();
 
 
             foreach (var dataFile in expenseDataFiles)
             {
-                //fruits \n 10 \n food
-                /*File.Delete(dataFile);
-                continue;*/
+               /*File.Delete(dataFile);
+                 continue;*/
+
                 var data = File.ReadAllText(dataFile);
+                //Console.WriteLine(data);
                 string[] dataSplit = data.Split('\n');
 
 
@@ -49,16 +48,20 @@ namespace ExpenseTracker
                     Name = dataSplit[0],
                     Amount = Convert.ToDecimal(dataSplit[1]),
                     Category = dataSplit[2],
-                    DateOfPurchase = Convert.ToDateTime(dataSplit[3])
-                    
+                    DateOfPurchase = Convert.ToDateTime(dataSplit[3]),
+                    CategoryIcon = Expenses.CATEGORY_URL_MAP[dataSplit[2]]
                 };
 
                 expenses.Add(expense);
+                totalSum = totalSum + expense.Amount;
             }
+
+            decimal remainingAmount = Convert.ToDecimal(Budget) - totalSum;
+
+            RemainingAmountLabel.Text = $"Remaining Budget is {remainingAmount}";
 
             listview.ItemsSource = expenses;
         }
-
 
         private async void OnAddExpensesClicked(object sender, EventArgs e)
         {

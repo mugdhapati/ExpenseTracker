@@ -22,10 +22,11 @@ namespace ExpenseTracker.Models
         {
             InitializeComponent();
 
+           pickerCategory.ItemsSource = Expenses.CATEGORIES;
         }
 
 
-        private async void OnSaveButtonClicked(object sender, EventArgs e)
+        private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var expensePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
                 LocalApplicationData),
@@ -46,22 +47,21 @@ namespace ExpenseTracker.Models
 
             File.WriteAllText(expensePath, expenses.toString());
 
+            Navigation.PopModalAsync();
 
-
-            await Navigation.PushModalAsync(new ExpenseEntryPage
+            /*await Navigation.PushModalAsync(new ExpenseEntryPage
             {
-
-                Budget = File.ReadAllText
+                
+                Budget= File.ReadAllText
                ("data/user/0/com.companyname.expensetrackingapp/files/.local/share/ExpenseBudget.txt")
-
-
-            });
+               
+            }); */
 
         }
 
         private void OnDeleteButtonClicked(object sender, EventArgs e)
         {
-
+            Navigation.PopModalAsync();
         }
 
         private void MainDatePicker_DateSelected(object sender, DateChangedEventArgs e)

@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="ExpenseTracker.Models.ExpenseModel">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20,35,20,20">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -15,11 +15,12 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                <Label Text="Expense Tracker" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large" HeightRequest="80"/>
 
-                <Entry x:Name="nameLabel"  Placeholder="Name"  Grid.Row="0" FontSize="Large" PlaceholderColor="Black" />
-                <Entry x:Name="amountLabel" Placeholder="Amount" Grid.Row="1" FontSize="Large" PlaceholderColor="Black"/>
+                <Entry x:Name="nameLabel"  Placeholder="Name"  Grid.Row="0" FontSize="Medium" PlaceholderColor="Black" />
+                <Entry x:Name="amountLabel" Placeholder="Amount" Grid.Row="1" FontSize="Medium" PlaceholderColor="Black" Keyboard="Numeric"/>
                 <StackLayout Grid.Row="2">
-                    <Label Text="Enter the PuchaseDate" FontSize="Large" TextColor="Red"/>
+                    <Label Text="PuchaseDate" FontSize="Medium" TextColor="Red"/>
                     <DatePicker x:Name="MainDatePicker" Grid.Row="3" 
                             MinimumDate="1/1/2020"
                             MaximumDate="12/31/2050"
@@ -28,7 +29,7 @@
                 </StackLayout>
 
                 <Picker x:Name="pickerCategory"  Grid.Row="4" 
-                Title="Select a Category" FontSize="Large" 
+                Title="Select a Category" FontSize="Medium" 
                 TitleColor="Red">
                     <Picker.Items>
                         <x:String>Food</x:String>
